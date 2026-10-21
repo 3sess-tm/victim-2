@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Victim 2 — Stellenausschreibung</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #eae9e4;
+    --paper: #f7f6f1;
+    --ink: #171717;
+    --red: #d92e2e;
+    --muted: #77766f;
+    --line: #d4d2ca;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Papier */
+
+.page {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 55px 60px 35px;
+    background: var(--paper);
+    border: 1px solid #d9d7cf;
+    box-shadow: 0 15px 50px #0000000a;
+}
+
+/* Kopfzeile */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--ink);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.stamp {
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 5px 8px;
+    transform: rotate(-3deg);
+}
+
+/* Titel */
+
+h1 {
+    margin-top: 45px;
+    font-size: clamp(55px, 10vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.intro {
+    margin-top: 35px;
+    padding: 15px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* Abschnitte */
+
+section {
+    margin-top: 35px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+/* Anforderungen */
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+    font-weight: 500;
+    transition: padding-left 0.2s ease;
+}
+
+li:hover {
+    padding-left: 7px;
+}
+
+.number {
+    color: var(--red);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+/* Bezahlung */
+
+.payment {
+    margin-top: 40px;
+    padding: 22px;
+    background: #eeede7;
+    border-left: 3px solid var(--red);
+}
+
+.payment h2 {
+    margin-bottom: 15px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.reward {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 11px 0;
+    border-bottom: 1px solid #d9d7cf;
+    font-size: 13px;
+}
+
+.reward:last-child {
+    border-bottom: none;
+}
+
+.reward span:last-child {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Fußzeile */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 45px;
+    padding-top: 15px;
+    border-top: 2px solid var(--ink);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+footer span:last-child {
+    color: var(--red);
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .page {
+        padding: 30px 22px 25px;
+    }
+
+    h1 {
+        letter-spacing: -3px;
+    }
+
+    .reward {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .reward span:last-child {
+        text-align: left;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <header class="top">
+        <span><a href="/">Victim 2</a> / Personalabteilung</span>
+        <span class="stamp">Stellenausschreibung</span>
+    </header>
+
+    <h1>Gesucht.</h1>
+
+    <div class="subtitle">
+        Keyboarder (m)
+    </div>
+
+    <div class="intro">
+        Die Band Victim 2 sucht Verstärkung an den Tasten.
+        Vorkenntnisse sind optional. Anwesenheit wäre wünschenswert.
+    </div>
+
+    <section>
+        <div class="section-title">
+            Anforderungen
+        </div>
+
+        <ul>
+            <li title="Nach Nike's definition hot sein">
+                <span class="number">01</span>
+                <span>Gut aussehen</span>
+            </li>
+
+            <li>
+                <span class="number">02</span>
+                <span>So tun können, als ob man Keyboard spielen kann</span>
+            </li>
+        </ul>
+    </section>
+
+    <div class="payment">
+
+        <h2>Bezahlung</h2>
+
+        <div class="reward">
+            <span>Warmer Händedruck von Severin</span>
+            <span>01 × HÄNDEDRUCK</span>
+        </div>
+
+        <div class="reward">
+            <span>Ein „Miau“ von Max</span>
+            <span>01 × MIAU</span>
+        </div>
+
+        <div class="reward">
+            <span>Ein „Wuff“ von Nike</span>
+            <span>01 × WUFF</span>
+        </div>
+
+    </div>
+
+    <footer>
+        <span>VICTIM 2 © 2026</span>
+        <span>UNBEZAHLT. UNQUALIFIZIERT. UNVERZICHTBAR.</span>
+    </footer>
+
+</main>
+
+</body>
+</html>
